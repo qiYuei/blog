@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import path from "node:path";
 import { SearchPlugin } from "vitepress-plugin-search";
+import { getSideBar } from "./plugins/resolveSidebar";
 // https://vitepress.dev/reference/site-config
 
 export default defineConfig({
@@ -24,15 +25,16 @@ export default defineConfig({
       { text: "Examples", link: "/markdown-examples" },
     ],
 
-    sidebar: [
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
-    ],
+    // [
+    //   {
+    //     text: "Examples",
+    //     items: [
+    //       { text: "Markdown Examples", link: "/markdown-examples" },
+    //       { text: "Runtime API Examples", link: "/api-examples" },
+    //     ],
+    //   },
+    // ]
+    sidebar: getSideBar(),
 
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },

@@ -12,12 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash-es": "^4.17.7",
     "@types/node": "^18.16.0",
     "flexsearch": "^0.7.31",
     "vitepress": "1.0.0-alpha.74",
     "vitepress-plugin-search": "1.0.4-alpha.20"
   },
   "dependencies": {
+    "fast-glob": "^3.2.12",
+    "lodash-es": "^4.17.21",
     "vue": "^3.2.47"
   }
 }
