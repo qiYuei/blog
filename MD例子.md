@@ -70,11 +70,13 @@
   ```
 - 输出
 
-  <!-- [主页](/首页/index) -->
+```js
+// <!-- [主页](/首页/index) -->
 
-  <!-- <a href="/Help/FAQ/sample">跳转到 FAQ 文件夹下的 sample.md</a>
+// <!-- <a href="/Help/FAQ/sample">跳转到 FAQ 文件夹下的 sample.md</a>
 
-  <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a> -->
+// <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a> -->
+```
 
 ## 图片
 
@@ -93,7 +95,10 @@
   <!-- <img src="@img/axios_img.jpeg" /> -->
   ```
 - 输出
-  <!-- <img src="@img/axios_img.jpeg" /> -->
+
+```js
+// <img src="@img/axios_img.jpeg" />
+```
 
 ## 远程视频
 

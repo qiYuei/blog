@@ -13,6 +13,9 @@ export default defineConfig({
   title: "aymoc写博客的地方",
   description: "博客",
   vite: {
+    ssr: {
+      noExternal: ["element-plus"],
+    },
     plugins: [
       AutoImport({
         resolvers: [ElementPlusResolver()],
