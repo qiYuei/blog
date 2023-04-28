@@ -65,16 +65,16 @@
 - 输入
   ```html
   <!-- [主页](/首页/index) -->
-  <a href="/detail/index">跳转到detail文件夹下的index.md</a>
-  <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a>
+  <!-- <a href="/detail/index">跳转到detail文件夹下的index.md</a>
+  <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a> -->
   ```
 - 输出
 
   <!-- [主页](/首页/index) -->
 
-  <a href="/Help/FAQ/sample">跳转到 FAQ 文件夹下的 sample.md</a>
+  <!-- <a href="/Help/FAQ/sample">跳转到 FAQ 文件夹下的 sample.md</a>
 
-  <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a>
+  <a href="/Help/FAQ/sample#代码块">跳转示例页面下的代码块锚点</a> -->
 
 ## 图片
 
@@ -90,10 +90,10 @@
 - 输入
   ```html
   <!-- 图片路径：@img表示公共资源下的图片文件夹，如：./resource/image -->
-  <img src="@img/axios_img.jpeg" />
+  <!-- <img src="@img/axios_img.jpeg" /> -->
   ```
 - 输出
-  <img src="@img/axios_img.jpeg" />
+  <!-- <img src="@img/axios_img.jpeg" /> -->
 
 ## 远程视频
 
