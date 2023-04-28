@@ -2,14 +2,28 @@ import { defineConfig } from "vitepress";
 import path from "node:path";
 import { SearchPlugin } from "vitepress-plugin-search";
 import { getSideBar } from "./plugins/resolveSidebar";
+
 // https://vitepress.dev/reference/site-config
 
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 export default defineConfig({
   outDir: path.resolve(__dirname, "../dist"),
   title: "aymoc写博客的地方",
   description: "博客",
   vite: {
     plugins: [
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        // allow auto load markdown components under `./src/components/`
+        extensions: ["vue", "md"],
+        // allow auto import and register components used in markdown
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        resolvers: [ElementPlusResolver()],
+      }),
       SearchPlugin({
         previewLength: 62,
         tokenize: "full",
@@ -39,5 +53,6 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
+    outline: [1, 4],
   },
 });
