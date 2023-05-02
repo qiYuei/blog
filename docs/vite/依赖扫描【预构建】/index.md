@@ -1,13 +1,12 @@
 当首次启动 `vite` 时，`Vite` 在本地加载你的站点之前预构建了项目依赖。默认情况下，它是自动且透明地完成的。并在`node_modules`下生成`.vite/deps`下生成产物,这一步是使用`esbuild`来完成的。
 
----
+<el-divider />
 
 围绕着预构建我们先来看一下几个问题
 
 1. 为什么需要预构建
 2. 预构建的内容是什么？/ 哪些模块需要进行预构建？
 3. 如何找到需要预构建的模块？
-   <a name="wU9qy"></a>
 
 ## 为什么需要预构建
 
@@ -245,13 +244,10 @@ build.onLoad({ filter: htmlTypesRE, namespace: "html" }, async ({ path }) => {
   - 外部 script，改为用 **import 引入**
   - 内联 script，改为引入**虚拟模块**，并将对应的虚拟模块的内容**缓存到 script 对象。**
 - 最后返回转换后的 js
-  <a name="Jv3xR"></a>
 
 #### 解析 JS
 
 **esbuild 本身就能处理 JS 语法**，因此 JS 是不需要任何处理的，esbuild 能够分析出 JS 文件中的依赖，并进一步深入处理这些依赖。
-
-<a name="ObXCj"></a>
 
 ### 依赖扫描结果
 

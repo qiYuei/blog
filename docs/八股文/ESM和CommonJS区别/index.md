@@ -88,11 +88,11 @@ module.exports = {
 };
 ```
 
-![执行结果](../../sources/imgs/commonjs.png)
+![执行结果](./imgs/commonjs.png)
 
 可以看到在执行的时候竟然没有报错,对于这种互相引用的关系按理来说回报错才对。我们接下来打断点看看 `node` 中是如何处理这种关系的。
 
-![debugger](../../sources/imgs/2.png)
+![debugger](./imgs/2.png)
 
 可以看到在执行 `2.c.js` 的时候,在 `require` 中有缓存的 `cache` 但是 `exports` 是一个空对象。这也正常因为 `1.c.js` 并没有执行完。
 
@@ -131,19 +131,19 @@ function add(t) {
 export { add };
 ```
 
-![node中的执行结果](../../sources/imgs/3.png)
+![node中的执行结果](./imgs/3.png)
 
-![浏览器中的执行结果](../../sources/imgs/4.png)
+![浏览器中的执行结果](./imgs/4.png)
 
 目前环境中 `node` 版本 `14.20.0` 与 浏览器中的结果有出入，但是在高版本浏览器中的结果是与浏览器一致。
 
 出现这个错的原因是因为我们用了 `const` 没有变量提升,改成 `var` 试试。
 
-![更改成var](../../sources/imgs/5.png)
+![更改成var](./imgs/5.png)
 
 不认真看还真以为跟 `CommonJS` 的结果一致，但是仔细看 **给变量赋值后** 再打印。竟然有值出现！！！
 
-![浏览器中调试](../../sources/imgs/6.png)
+![浏览器中调试](./imgs/6.png)
 
 ### 总结
 

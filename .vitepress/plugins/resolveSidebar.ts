@@ -63,10 +63,17 @@ function generateRoute(
       text: dir,
       collapsed: true,
     };
-    if (paths.length === 0) {
+    if (paths.length === 1) {
       //最后一项说明到md文件了
-      newItem.text = newItem.text?.slice(0, newItem.text.length - 3);
+      if (paths[paths.length - 1] !== "index.md") {
+        newItem.text = paths[paths.length - 1]?.slice(
+          0,
+          paths[paths.length - 1].length - 3
+        );
+      }
+      // newItem.text = newItem.text?.slice(0, newItem.text.length - 3);
       newItem.link = "/docs" + "/" + fullPath.slice(0, fullPath.length - 3);
+
       if (newItem.items?.length === 0) {
         delete newItem.items;
       }
@@ -96,3 +103,15 @@ export function getSideBar() {
 //     ],
 //   },
 // ]
+
+// {
+//   "text": "八股文",
+//   "collapsed": true,
+//   "items": [
+//     {
+//       "text": "ESM和CommonJS区别",
+//       "collapsed": true,
+//       "link": "/docs/八股文/ESM和CommonJS区别/index"
+//     }
+//   ]
+// }
