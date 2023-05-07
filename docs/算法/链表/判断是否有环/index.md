@@ -1,0 +1,61 @@
+如何判断一个链表是否是环形链表呢？不管是哪一种环形链表，循环遍历的时候一定是死循环的，<br />那么在链表循环过程中，如果我们不止一次的遇到同一个节点，这个链表就肯定是环形链表。<br />链表有环分两种
+
+- 首尾结成环
+- 尾部与其他节点结成环,统称 6 子环
+
+解题方法有
+
+- 快慢指针法
+- 哈希表法
+
+#### 快慢指针
+
+顾名思义就是有两个指针,一个指针指向链表的两个 `next` 而另外一个指针每次指向一个 `next`
+
+```javascript
+let fast = head.next.next;
+let slow = head.next;
+```
+
+这样 `fast` 永远比 `slow` 快一个单位,就好比两个人去跑步,一个人的速度是 `2n`,一个是 `n`。如果是在操场上跑步的话总有一个时间点这两人是相遇的。但是如果是在没有环的大马路上,跑到下辈子都不能相遇的。
+
+```javascript
+/**
+ * @{param} head
+ **/
+function hasCycle(head) {
+  let fast = head;
+  let slow = head;
+  while (fast && fast.next) {
+    fast = fast.next.next;
+    slow = slow.next;
+    if (fast === slow) return true;
+  }
+  // 如果走出循环了就说明没有相遇
+  return false;
+}
+```
+
+#### 哈希表法
+
+哈希表在 `JS` 中就是使用 `ES6` 的`new Map()`,借助这种数据方式的 `key` 可以以任何形式存储,如果有相同的 `key`那就说明有环啦
+
+```javascript
+/**
+ * @{param} head
+ **/
+function hasCycle(head) {
+  let node = head;
+  let map = new Map();
+  while (node) {
+    if (map.has(node)) {
+      return true;
+    } else {
+      // 指针往下
+      map.set(node, 1);
+      node = node.next;
+    }
+  }
+  return false;
+}
+```
