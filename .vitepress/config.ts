@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 import path from "node:path";
 import { SearchPlugin } from "vitepress-plugin-search";
 import { getSideBar } from "./plugins/resolveSidebar";
-
+import { replaceImagePlugin } from "./plugins/markdown/replaceImageTag";
 // https://vitepress.dev/reference/site-config
 
 import AutoImport from "unplugin-auto-import/vite";
@@ -12,6 +12,11 @@ export default defineConfig({
   outDir: path.resolve(__dirname, "../dist"),
   title: "aymoc写博客的地方",
   description: "博客",
+  markdown: {
+    config(md) {
+      md.use(replaceImagePlugin);
+    },
+  },
   vite: {
     ssr: {
       noExternal: ["element-plus"],
@@ -41,7 +46,9 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Examples", link: "/markdown-examples" },
     ],
-
+    // search: {
+    //   provider: "local",
+    // },
     // [
     //   {
     //     text: "Examples",

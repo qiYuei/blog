@@ -92,11 +92,6 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
-img {
-  margin: 12px 0;
-  box-shadow: var(--vp-c-box-shadow);
-}
-
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -118,4 +113,12 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background-color: #0000004d;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  z-index: 23;
+}
+
+.medium-zoom--opened .medium-zoom-image--opened {
+  z-index: 24;
 }

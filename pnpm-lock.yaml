@@ -7,6 +7,8 @@ specifiers:
   fast-glob: ^3.2.12
   flexsearch: ^0.7.31
   lodash-es: ^4.17.21
+  markdown-it: 13.0.1
+  medium-zoom: ^1.0.8
   unplugin-auto-import: ^0.15.3
   unplugin-vue-components: ^0.24.1
   vitepress: 1.0.0-alpha.74
@@ -17,12 +19,14 @@ dependencies:
   element-plus: 2.3.4_vue@3.2.47
   fast-glob: 3.2.12
   lodash-es: 4.17.21
+  medium-zoom: 1.0.8
   vue: 3.2.47
 
 devDependencies:
   '@types/lodash-es': 4.17.7
   '@types/node': 18.16.0
   flexsearch: 0.7.31
+  markdown-it: 13.0.1
   unplugin-auto-import: 0.15.3
   unplugin-vue-components: 0.24.1_vue@3.2.47
   vitepress: 1.0.0-alpha.74_@types+node@18.16.0
@@ -964,6 +968,10 @@ packages:
   /mdurl/1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
     dev: true
+
+  /medium-zoom/1.0.8:
+    resolution: {integrity: sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==}
+    dev: false
 
   /memoize-one/6.0.0:
     resolution: {integrity: sha512-rkpe71W0N0c0Xz6QD0eJETuWAJGnJ9afsl1srmwPrI+yBCkge5EycXXbYRyvL29zZVUWQCY7InPRCv3GDXuZNw==}
