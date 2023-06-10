@@ -1,4 +1,4 @@
-import path from "node:path";
+import path, { normalize } from "node:path";
 import glob from "fast-glob";
 import fs from "node:fs";
 import type { DefaultTheme } from "vitepress/types/default-theme";
@@ -16,6 +16,11 @@ interface Options {
   ignoreMDFiles?: Array<string>; // File path to ignore from being captured.
 }
 
+// 去除流水号
+function normalizeNumber(str: string) {
+  if (!str) return str;
+}
+
 function getMdPath(
   parentPath: string,
   ignoreMDFiles: Array<string> = []
@@ -25,7 +30,7 @@ function getMdPath(
     cwd: docsRootPath,
     ignore: ignoreMDFiles,
   });
-  return files.map((filePath) => {
+  return files.sort().map((filePath) => {
     const fileName = filePath.split("/").pop()!;
     return { path: filePath, fileName };
   });
@@ -39,8 +44,8 @@ function resolveSideBar(baseDir: string, opts?: Options) {
   for (let file of mdFiles) {
     generateRoute(file.path.split("/"), file, sidebars);
   }
+  fs.writeFileSync("./text.json", JSON.stringify(sidebars, null, 2));
 
-  fs.writeFileSync("./text.json", JSON.stringify(sidebars));
   return sidebars;
 }
 
@@ -52,7 +57,8 @@ function generateRoute(
   if (!sidebar) return;
   const { path: fullPath, fileName } = file;
 
-  const dir = paths.shift();
+  let dir = paths.shift();
+  dir = dir?.split("_").pop();
   if (!dir) return;
   const sideItem = sidebar.find((item) => item.text === dir);
 
@@ -66,12 +72,12 @@ function generateRoute(
     if (paths.length === 1) {
       //最后一项说明到md文件了
       if (paths[paths.length - 1] !== "index.md") {
-        newItem.text = paths[paths.length - 1]?.slice(
-          0,
-          paths[paths.length - 1].length - 3
-        );
+        newItem.text = paths[paths.length - 1]
+          ?.slice(0, paths[paths.length - 1].length - 3)
+          .split("_")
+          .pop();
       }
-      // newItem.text = newItem.text?.slice(0, newItem.text.length - 3);
+
       newItem.link = "/docs" + "/" + fullPath.slice(0, fullPath.length - 3);
 
       if (newItem.items?.length === 0) {

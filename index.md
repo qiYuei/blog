@@ -4,22 +4,10 @@ layout: home
 
 hero:
   name: "aymoc写博客的地方"
-  text: "博客"
-  tagline: My great project tagline
+  text: "每日三省吾身"
+  tagline: "今日你博学了吗"
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始博学
       link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
-
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-

@@ -12,6 +12,8 @@ export default defineConfig({
   outDir: path.resolve(__dirname, "../dist"),
   title: "aymoc写博客的地方",
   description: "博客",
+  head: [["link", { rel: "icon", href: "/StreamlineEmojis2.svg" }]],
+
   markdown: {
     config(md) {
       md.use(replaceImagePlugin);

@@ -1,1 +1,250 @@
-[{"text":"Monorepo","collapsed":true,"items":[{"text":"PNPM构建Monorepo","link":"/docs/Monorepo/PNPM构建Monorepo/index"},{"text":"【changesets】发包原理","link":"/docs/Monorepo/【changesets】发包原理/index"},{"text":"【changesets】如何找到依赖包的依赖关系","link":"/docs/Monorepo/【changesets】如何找到依赖包的依赖关系/index"}]},{"text":"Vite","collapsed":true,"items":[{"text":"依赖扫描【预构建】","link":"/docs/Vite/依赖扫描【预构建】/index"},{"text":"如何兼容 Rollup 插件生态","link":"/docs/Vite/如何兼容 Rollup 插件生态/index"}]},{"text":"Vue","collapsed":true,"items":[{"text":"剖析烦人的mixin","link":"/docs/Vue/剖析烦人的mixin/index"},{"text":"实现Vue3响应式","link":"/docs/Vue/实现Vue3响应式/index"},{"text":"浅析Vue2响应式","link":"/docs/Vue/浅析Vue2响应式/index"}]},{"text":"Webpack","collapsed":true,"items":[{"text":"tapable源码浅析","link":"/docs/Webpack/tapable源码浅析/index"},{"text":"webpack构建流程","link":"/docs/Webpack/webpack构建流程/index"},{"text":"webpack热更新原理","link":"/docs/Webpack/webpack热更新原理/index"}]},{"text":"八股文","collapsed":true,"items":[{"text":"ESM和CommonJS区别","link":"/docs/八股文/ESM和CommonJS区别/index"},{"text":"事件循环","link":"/docs/八股文/事件循环/index"},{"text":"从0开始实现一个Promise","link":"/docs/八股文/从0开始实现一个Promise/index"},{"text":"兼容性处理","link":"/docs/八股文/兼容性处理/index"},{"text":"垃圾回收","link":"/docs/八股文/垃圾回收/index"},{"text":"大文件上传","link":"/docs/八股文/大文件上传/index"},{"text":"实现并发限制","link":"/docs/八股文/实现并发限制/index"},{"text":"浅谈valueOf和toString","link":"/docs/八股文/浅谈valueOf和toString/index"},{"text":"精度问题","link":"/docs/八股文/精度问题/index"},{"text":"继承的几种方式","link":"/docs/八股文/继承的几种方式/index"},{"text":"高频手写题","link":"/docs/八股文/高频手写题/index"}]},{"text":"微前端","collapsed":true,"items":[{"text":"qiankun","link":"/docs/微前端/qiankun/index"},{"text":"single-spa","link":"/docs/微前端/single-spa/index"}]},{"text":"浏览器相关","collapsed":true,"items":[{"text":"Cookie","link":"/docs/浏览器相关/Cookie/index"},{"text":"Html和Css梳理","link":"/docs/浏览器相关/Html和Css梳理/index"},{"text":"从URL到页面展示发生了什么","link":"/docs/浏览器相关/从URL到页面展示发生了什么/index"},{"text":"内存溢出处理","link":"/docs/浏览器相关/内存溢出处理/index"},{"text":"重绘和重排","link":"/docs/浏览器相关/重绘和重排/index"}]},{"text":"算法","collapsed":true,"items":[{"text":"二分查找","link":"/docs/算法/二分查找/index"},{"text":"链表","collapsed":true,"items":[{"text":"判断是否有环","link":"/docs/算法/链表/判断是否有环/index"}]}]},{"text":"计算机网络相关","collapsed":true,"items":[{"text":"http2和http3","link":"/docs/计算机网络相关/http2和http3/index"},{"text":"HTTP缓存","link":"/docs/计算机网络相关/HTTP缓存/index"},{"text":"三次握手和四次挥手","link":"/docs/计算机网络相关/三次握手和四次挥手/index"},{"text":"传统RSA握手和TLS1-2-TLS1-3握手","link":"/docs/计算机网络相关/传统RSA握手和TLS1-2-TLS1-3握手/index"},{"text":"非对称加密和对称加密","link":"/docs/计算机网络相关/非对称加密和对称加密/index"}]},{"text":"杂项","collapsed":true,"items":[{"text":"Git","collapsed":true,"items":[{"text":"如何利用 github 进行多人协作开发","link":"/docs/杂项/Git/如何利用 github 进行多人协作开发/index"}]},{"text":"MarkDown-it","collapsed":true,"items":[{"text":"自定义图片渲染标签","link":"/docs/杂项/MarkDown-it/自定义图片渲染标签/index"}]},{"text":"富文本编辑器","collapsed":true,"items":[{"text":"Slate.js-从基本使用到核心","link":"/docs/杂项/富文本编辑器/Slate.js-从基本使用到核心/index"},{"text":"实现简单的富文本编辑器","link":"/docs/杂项/富文本编辑器/实现简单的富文本编辑器/index"},{"text":"浅谈L0富文本编辑器的困境与破局","link":"/docs/杂项/富文本编辑器/浅谈L0富文本编辑器的困境与破局/index"}]}]}]
+[
+  {
+    "text": "Monorepo",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "PNPM构建Monorepo",
+        "link": "/docs/0000100_Monorepo/000100_PNPM构建Monorepo/PNPM构建Monorepo"
+      },
+      {
+        "text": "【changesets】发包原理",
+        "link": "/docs/0000100_Monorepo/000200_【changesets】发包原理/【changesets】发包原理"
+      },
+      {
+        "text": "【changesets】如何找到依赖包的依赖关系",
+        "link": "/docs/0000100_Monorepo/000300_【changesets】如何找到依赖包的依赖关系/【changesets】如何找到依赖包的依赖关系"
+      }
+    ]
+  },
+  {
+    "text": "Vite",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "依赖扫描【预构建】",
+        "link": "/docs/0000200_Vite/000100_依赖扫描【预构建】/依赖扫描【预构建】"
+      },
+      {
+        "text": "如何兼容 Rollup 插件生态",
+        "link": "/docs/0000200_Vite/000200_如何兼容 Rollup 插件生态/如何兼容 Rollup 插件生态"
+      }
+    ]
+  },
+  {
+    "text": "Vue",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "剖析烦人的mixin",
+        "link": "/docs/0000300_Vue/000100_剖析烦人的mixin/剖析烦人的mixin"
+      },
+      {
+        "text": "浅析Vue2响应式",
+        "link": "/docs/0000300_Vue/000200_浅析Vue2响应式/浅析Vue2响应式"
+      },
+      {
+        "text": "实现Vue3响应式",
+        "link": "/docs/0000300_Vue/000300_实现Vue3响应式/实现Vue3响应式"
+      }
+    ]
+  },
+  {
+    "text": "Webpack",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "webpack构建流程",
+        "link": "/docs/0000400_Webpack/000100_webpack构建流程/webpack构建流程"
+      },
+      {
+        "text": "webpack热更新原理",
+        "link": "/docs/0000400_Webpack/000200_webpack热更新原理/webpack热更新原理"
+      },
+      {
+        "text": "tapable源码浅析",
+        "link": "/docs/0000400_Webpack/000300_tapable源码浅析/tapable源码浅析"
+      }
+    ]
+  },
+  {
+    "text": "八股文",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "ESM和CommonJS区别",
+        "link": "/docs/0000500_八股文/000100_ESM和CommonJS区别/ESM和CommonJS区别"
+      },
+      {
+        "text": "事件循环",
+        "link": "/docs/0000500_八股文/000200_事件循环/事件循环"
+      },
+      {
+        "text": "从0开始实现一个Promise",
+        "link": "/docs/0000500_八股文/000300_从0开始实现一个Promise/从0开始实现一个Promise"
+      },
+      {
+        "text": "垃圾回收",
+        "link": "/docs/0000500_八股文/000500_垃圾回收/垃圾回收"
+      },
+      {
+        "text": "大文件上传",
+        "link": "/docs/0000500_八股文/000600_大文件上传/大文件上传"
+      },
+      {
+        "text": "实现并发限制",
+        "link": "/docs/0000500_八股文/000700_实现并发限制/实现并发限制"
+      },
+      {
+        "text": "浅谈valueOf和toString",
+        "link": "/docs/0000500_八股文/000800_浅谈valueOf和toString/浅谈valueOf和toString"
+      },
+      {
+        "text": "精度问题",
+        "link": "/docs/0000500_八股文/000900_精度问题/精度问题"
+      },
+      {
+        "text": "继承的几种方式",
+        "link": "/docs/0000500_八股文/001000_继承的几种方式/继承的几种方式"
+      },
+      {
+        "text": "兼容性处理",
+        "link": "/docs/0000500_八股文/001100_兼容性处理/兼容性处理"
+      },
+      {
+        "text": "高频手写题",
+        "link": "/docs/0000500_八股文/001200_高频手写题/高频手写题"
+      }
+    ]
+  },
+  {
+    "text": "微前端",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "【single-spa】源码解析",
+        "link": "/docs/0000600_微前端/000100_single-spa/【single-spa】源码解析"
+      },
+      {
+        "text": "【qiankun】源码解析",
+        "link": "/docs/0000600_微前端/000200_qiankun/【qiankun】源码解析"
+      }
+    ]
+  },
+  {
+    "text": "浏览器相关",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Cookie梳理",
+        "link": "/docs/0000700_浏览器相关/000100_Cookie梳理/Cookie梳理"
+      },
+      {
+        "text": "Html和Css梳理",
+        "link": "/docs/0000700_浏览器相关/000200_Html和Css梳理/Html和Css梳理"
+      },
+      {
+        "text": "从URL到页面展示发生了什么",
+        "link": "/docs/0000700_浏览器相关/000300_从URL到页面展示发生了什么/从URL到页面展示发生了什么"
+      },
+      {
+        "text": "内存溢出处理",
+        "link": "/docs/0000700_浏览器相关/000400_内存溢出处理/内存溢出处理"
+      },
+      {
+        "text": "重绘和重排",
+        "link": "/docs/0000700_浏览器相关/000500_重绘和重排/重绘和重排"
+      }
+    ]
+  },
+  {
+    "text": "计算机网络相关",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "HTTP缓存",
+        "link": "/docs/0000800_计算机网络相关/000100_HTTP缓存/HTTP缓存"
+      },
+      {
+        "text": "三次握手和四次挥手",
+        "link": "/docs/0000800_计算机网络相关/000200_三次握手和四次挥手/三次握手和四次挥手"
+      },
+      {
+        "text": "传统RSA握手和TLS1-2-TLS1-3握手",
+        "link": "/docs/0000800_计算机网络相关/000300_传统RSA握手和TLS1-2-TLS1-3握手/传统RSA握手和TLS1-2-TLS1-3握手"
+      },
+      {
+        "text": "非对称加密和对称加密",
+        "link": "/docs/0000800_计算机网络相关/000400_非对称加密和对称加密/非对称加密和对称加密"
+      },
+      {
+        "text": "http2和http3",
+        "link": "/docs/0000800_计算机网络相关/000500_http2和http3/http2和http3"
+      }
+    ]
+  },
+  {
+    "text": "算法",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "二分查找",
+        "link": "/docs/0000900_算法/000100_二分查找/二分查找"
+      },
+      {
+        "text": "链表",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "判断是否有环",
+            "link": "/docs/0000900_算法/000200_链表/判断是否有环/判断是否有环"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "杂项",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "Git",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "如何利用 github 进行多人协作开发",
+            "link": "/docs/0001000_杂项/000100_Git/如何利用 github 进行多人协作开发/如何利用 github 进行多人协作开发"
+          }
+        ]
+      },
+      {
+        "text": "MarkDown-it",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "自定义图片渲染标签",
+            "link": "/docs/0001000_杂项/000200_MarkDown-it/自定义图片渲染标签/自定义图片渲染标签"
+          }
+        ]
+      },
+      {
+        "text": "富文本编辑器",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "浅谈L0富文本编辑器的困境与破局",
+            "link": "/docs/0001000_杂项/000300_富文本编辑器/000100_浅谈L0富文本编辑器的困境与破局/浅谈L0富文本编辑器的困境与破局"
+          },
+          {
+            "text": "实现简单的富文本编辑器",
+            "link": "/docs/0001000_杂项/000300_富文本编辑器/000200_实现简单的富文本编辑器/实现简单的富文本编辑器"
+          },
+          {
+            "text": "Slate.js-从基本使用到核心",
+            "link": "/docs/0001000_杂项/000300_富文本编辑器/000300_Slate.js-从基本使用到核心/Slate.js-从基本使用到核心"
+          }
+        ]
+      }
+    ]
+  }
+]
