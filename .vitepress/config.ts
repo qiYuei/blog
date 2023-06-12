@@ -14,11 +14,11 @@ export default defineConfig({
   description: "博客",
   head: [["link", { rel: "icon", href: "/StreamlineEmojis2.svg" }]],
 
-  markdown: {
-    config(md) {
-      md.use(replaceImagePlugin);
-    },
-  },
+  // markdown: {
+  //   config(md) {
+  //     md.use(replaceImagePlugin);
+  //   },
+  // },
   vite: {
     ssr: {
       noExternal: ["element-plus"],

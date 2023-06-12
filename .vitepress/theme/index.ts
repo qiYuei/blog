@@ -1,8 +1,9 @@
 // https://vitepress.dev/guide/custom-theme
-import { h } from "vue";
+import { h, onMounted, watch, nextTick } from "vue";
 import Theme from "vitepress/theme";
 import "./style.css";
-import ImageZoom from "../components/ImageZoom.vue";
+import mediumZoom from "medium-zoom";
+import { useRoute } from "vitepress";
 export default {
   ...Theme,
   Layout: () => {
@@ -10,8 +11,17 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     });
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
-    app.component(ImageZoom.name, ImageZoom);
+  setup() {
+    const route = useRoute();
+    const initZoom = () => {
+      mediumZoom(".main img", { background: "#212530" });
+    };
+    onMounted(() => {
+      initZoom();
+    });
+    watch(
+      () => route.path,
+      () => nextTick(() => initZoom())
+    );
   },
 };
