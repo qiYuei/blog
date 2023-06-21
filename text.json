@@ -46,6 +46,10 @@
       {
         "text": "实现Vue3响应式",
         "link": "/docs/0000300_Vue/000300_实现Vue3响应式/实现Vue3响应式"
+      },
+      {
+        "text": "详解Vue2Diff和Vue3Diff",
+        "link": "/docs/0000300_Vue/000400_详解Vue2Diff和Vue3Diff/详解Vue2Diff和Vue3Diff"
       }
     ]
   },
