@@ -9,5 +9,5 @@ hero:
   actions:
     - theme: brand
       text: 开始博学
-      link: /markdown-examples
+      link: /overview
 ---
