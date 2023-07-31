@@ -72,6 +72,10 @@
       {
         "text": "tapable源码浅析",
         "link": "/docs/0000400_Webpack/000300_tapable源码浅析/tapable源码浅析"
+      },
+      {
+        "text": "webpack灵魂几问",
+        "link": "/docs/0000400_Webpack/000400_webpack灵魂几问/webpack灵魂几问"
       }
     ]
   },
@@ -122,6 +126,10 @@
       {
         "text": "高频手写题",
         "link": "/docs/0000500_八股文/001200_高频手写题/高频手写题"
+      },
+      {
+        "text": "性能优化",
+        "link": "/docs/0000500_八股文/001300_性能优化/性能优化"
       }
     ]
   },
