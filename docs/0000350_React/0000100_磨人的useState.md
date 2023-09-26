@@ -64,3 +64,9 @@ function handleClick() {
 如果在`setTimeout`中多次调用`setState`页面将会更新多次
 
 在 `react18` 之后，`setState` 都是 **异步更新**。在`setTimeout`中多次调用`setState`页面只会更新一次。
+
+### 为什么是异步
+
+我们知道`Vue`中更新的也是异步行为，是将这个更新的操作全部放入一个队列中，然后利用`microtask`来执行这个队列，这样就实现了异步更新。
+
+那`react` 是怎么实现的呢？
