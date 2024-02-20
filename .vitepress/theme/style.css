@@ -122,3 +122,7 @@
 .medium-zoom--opened .medium-zoom-image--opened {
   z-index: 24;
 }
+
+.vp-doc table {
+  margin: 0;
+}

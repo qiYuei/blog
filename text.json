@@ -58,6 +58,10 @@
     ]
   },
   {
+    "text": "磨人的useState",
+    "link": "/docs/0000350_React/0000100_磨人的useState"
+  },
+  {
     "text": "Webpack",
     "collapsed": true,
     "items": [
@@ -90,56 +94,56 @@
     ]
   },
   {
-    "text": "八股文",
+    "text": "JavaScript",
     "collapsed": true,
     "items": [
       {
         "text": "ESM和CommonJS区别",
-        "link": "/docs/0000500_八股文/000100_ESM和CommonJS区别/ESM和CommonJS区别"
+        "link": "/docs/0000500_JavaScript/000100_ESM和CommonJS区别/ESM和CommonJS区别"
       },
       {
         "text": "事件循环",
-        "link": "/docs/0000500_八股文/000200_事件循环/事件循环"
+        "link": "/docs/0000500_JavaScript/000200_事件循环/事件循环"
       },
       {
         "text": "从0开始实现一个Promise",
-        "link": "/docs/0000500_八股文/000300_从0开始实现一个Promise/从0开始实现一个Promise"
+        "link": "/docs/0000500_JavaScript/000300_从0开始实现一个Promise/从0开始实现一个Promise"
       },
       {
         "text": "垃圾回收",
-        "link": "/docs/0000500_八股文/000500_垃圾回收/垃圾回收"
+        "link": "/docs/0000500_JavaScript/000500_垃圾回收/垃圾回收"
       },
       {
         "text": "大文件上传",
-        "link": "/docs/0000500_八股文/000600_大文件上传/大文件上传"
+        "link": "/docs/0000500_JavaScript/000600_大文件上传/大文件上传"
       },
       {
         "text": "实现并发限制",
-        "link": "/docs/0000500_八股文/000700_实现并发限制/实现并发限制"
+        "link": "/docs/0000500_JavaScript/000700_实现并发限制/实现并发限制"
       },
       {
         "text": "浅谈valueOf和toString",
-        "link": "/docs/0000500_八股文/000800_浅谈valueOf和toString/浅谈valueOf和toString"
+        "link": "/docs/0000500_JavaScript/000800_浅谈valueOf和toString/浅谈valueOf和toString"
       },
       {
         "text": "精度问题",
-        "link": "/docs/0000500_八股文/000900_精度问题/精度问题"
+        "link": "/docs/0000500_JavaScript/000900_精度问题/精度问题"
       },
       {
         "text": "继承的几种方式",
-        "link": "/docs/0000500_八股文/001000_继承的几种方式/继承的几种方式"
+        "link": "/docs/0000500_JavaScript/001000_继承的几种方式/继承的几种方式"
       },
       {
         "text": "兼容性处理",
-        "link": "/docs/0000500_八股文/001100_兼容性处理/兼容性处理"
+        "link": "/docs/0000500_JavaScript/001100_兼容性处理/兼容性处理"
       },
       {
         "text": "高频手写题",
-        "link": "/docs/0000500_八股文/001200_高频手写题/高频手写题"
+        "link": "/docs/0000500_JavaScript/001200_高频手写题/高频手写题"
       },
       {
         "text": "性能优化",
-        "link": "/docs/0000500_八股文/001300_性能优化/性能优化"
+        "link": "/docs/0000500_JavaScript/001300_性能优化/性能优化"
       }
     ]
   },
@@ -252,6 +256,16 @@
         ]
       },
       {
+        "text": "环境",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "安装msql",
+            "link": "/docs/0001000_杂项/0001300_环境/000100_安装mysql/000100_安装msql"
+          }
+        ]
+      },
+      {
         "text": "MarkDown-it",
         "collapsed": true,
         "items": [
@@ -278,6 +292,32 @@
             "link": "/docs/0001000_杂项/000300_富文本编辑器/000300_Slate.js-从基本使用到核心/Slate.js-从基本使用到核心"
           }
         ]
+      },
+      {
+        "text": "面试复习专项",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "CSS篇",
+            "link": "/docs/0001000_杂项/000400_面试复习专项/000100_复习专项/CSS篇"
+          },
+          {
+            "text": "JS篇",
+            "link": "/docs/0001000_杂项/000400_面试复习专项/000100_复习专项/JS篇"
+          },
+          {
+            "text": "工程化篇",
+            "link": "/docs/0001000_杂项/000400_面试复习专项/000100_复习专项/工程化篇"
+          },
+          {
+            "text": "框架篇",
+            "link": "/docs/0001000_杂项/000400_面试复习专项/000100_复习专项/框架篇"
+          },
+          {
+            "text": "浏览器篇",
+            "link": "/docs/0001000_杂项/000400_面试复习专项/000100_复习专项/浏览器篇"
+          }
+        ]
       }
     ]
   },
@@ -288,6 +328,16 @@
       {
         "text": "事件循环",
         "link": "/docs/0001100_Node/000100_事件循环/事件循环"
+      },
+      {
+        "text": "npm命令",
+        "collapsed": true,
+        "items": [
+          {
+            "text": "花式运行脚手架",
+            "link": "/docs/0001100_Node/000200_npm命令/000100_花式运行脚手架/花式运行脚手架"
+          }
+        ]
       }
     ]
   },
