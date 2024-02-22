@@ -42,6 +42,10 @@ export default defineConfig({
       }),
     ],
   },
+  markdown: {
+    theme: "one-dark-pro",
+    lineNumbers: true,
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/logo.svg",
@@ -61,6 +65,7 @@ export default defineConfig({
     //     ],
     //   },
     // ]
+
     sidebar: getSideBar(),
 
     socialLinks: [

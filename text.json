@@ -58,8 +58,14 @@
     ]
   },
   {
-    "text": "磨人的useState",
-    "link": "/docs/0000350_React/0000100_磨人的useState"
+    "text": "React",
+    "collapsed": true,
+    "items": [
+      {
+        "text": "磨人的useState",
+        "link": "/docs/0000350_React/000100_从hooks说起/0000100_磨人的useState"
+      }
+    ]
   },
   {
     "text": "Webpack",
