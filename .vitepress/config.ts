@@ -48,7 +48,7 @@ export default defineConfig({
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: "/logo.svg",
+    logo: "/StreamlineEmojis2.svg",
     // nav: [
     //   { text: "Home", link: "/" },
     //   { text: "Examples", link: "/markdown-examples" },
