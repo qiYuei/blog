@@ -139,7 +139,7 @@ function myNew(fn, ...args) {
 可以采用以下方式解决
 
 - 换成字符串计算
-- 使用 `math.js` 或者是 `bigint` 等库进行计算
+- 使用 `math.js` 或者是 `big.js` 等库进行计算
 
 ## 如何判断准确数据类型
 
@@ -158,6 +158,44 @@ resolveType(async function () {}); // 'AsyncFunction'
 ```
 
 ## 隐式转换
+
+### 基础类型
+
+1. `字符串`和`其他类型`比较，都会转换成**数字类型**
+2. `布尔类型` 和 `其他` 比较，都会转换成**数字类型**
+3. 对于 `null` 和 `undefined` 进行比较，`javascript` 规定 `null与undefined宽松相等(==)`，并且都与`自身相等`，但是与`其他所有值都不宽松相等`。
+   ```js
+   undefined == null; // true
+   undefined == undefined; // true
+   null == null; // true
+   null == false; // false
+   null == 0; // false
+   null == true; //false
+   undefined == 0; // false
+   undefined == true; // false
+   undefined == false; // false
+   ```
+
+### 复杂类型
+
+::: warning
+
+对于表达式来说比如有 `![]` 时会用 `Boolean()`进行包裹。
+有 `+/-` 等则会使用 `Number()`进行包裹
+
+:::
+
+一方有 `复杂类型` 比较时，会先调用 `复杂类型` 的 `valueOf` 方法，如果返回的是一个 `基础类型` 则回到 **基础类型的比较**，否则将调用 `toString` 方法，在进行**基础类型的比较**
+
+```js
+[] == ![];
+// [].valueOf() -> []
+// [].toString() -> ''
+
+// 右边是表达式所以先将![]转换成布尔类型  !Boolean([]) -> !(true) -> false
+// 左边是复杂类型，先调用valueOf() -> [],在调用toString() -> ''
+// 最后进行基础类型的比较-> 都转化成数字  0 == 0 -> true
+```
 
 ## setTimeout 和 setInterval 的缺陷
 
@@ -246,3 +284,54 @@ delayLoop(() => {
 :::
 
 3. 使用`worker`线程进行计算，通过`postMessage` 和`onmessage`进行通信
+
+## async 原理
+
+要明白 `async/await` 相当于是 `generator/yield` 的语法糖。内部会将函数转换成 `generator` 函数，将 `await` 后面的表达式转换成 `yield` 表达式。
+
+```js
+function co(fn) {
+  return new Promise((resolve, reject) => {
+    const gen = fn();
+
+    function next(data) {
+      let res;
+      try {
+        res = gen.next(data);
+      } catch (err) {
+        reject(err);
+      }
+
+      const { done, value } = res;
+      if (done) {
+        return resolve(value);
+      } else {
+        value.then((data) => next(data)).catch((err) => reject(err));
+      }
+    }
+    next();
+  });
+}
+```
+
+## clientHeight/offsetHeight/scrollHeight, 以及 clientTop/offsetTop/scrollTop 区别
+
+- `offset*`:获取元素的宽高(`宽高+padding+border`)包括滚动条宽高
+  1. `offsetTop/offsetLeft`: 只读属性, 返回元素相对于其 `offsetParent` 元素的`顶部和左侧`的距离
+  2. `offsetParent`: 指向上级最近的定位元素或者是 `table,td,th,body`
+- `client*`:获取元素的宽高(`宽高+padding`)不包含滚动条和 `border`
+  1. `clientTop/clientLeft`: 只读属性, 返回元素上边和左边框的大小也就是 `clientTop = clientLeft = borderWidth`
+- `scroll*`:获取元素到顶部的距离
+  ![alt text](./imgs//scroll.png)
+
+::: info
+可以由此来判断是否出现滚动条
+在没有出现滚动条的情况下 `clientHeight = scrollHeight|clientWidth = scrollWidth`
+
+判断`滚动条是否滚动到底部`通过这种方案
+
+```js
+Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
+```
+
+:::
