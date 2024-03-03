@@ -335,3 +335,57 @@ Math.abs(element.scrollHeight - element.clientHeight - element.scrollTop) < 1;
 ```
 
 :::
+
+## Proxy 为什么要搭配 Reflect 一起使用
+
+主要原因还是 `Reflect` 能够修正 `Proxy` 中的 `this` 问题
+
+```js
+const user = {
+  _name: "张三",
+  get name() {
+    console.log(this, this._name);
+  },
+};
+
+const userProxy = new Proxy(user, {
+  get(target, key, receiver) {
+    console.log(target, key, receiver);
+    return target[key];
+  },
+});
+
+const obj = {
+  _name: "李四",
+};
+
+Object.setPrototypeOf(obj, userProxy);
+console.log(obj.name); //张三 但是实际上我们需要的是李四
+```
+
+上面的例子可以看出我们在直接使用 `target[key]` 的时候, `this` 指向的是 `userProxy` 而不是 `调用者`
+而 `Reflect` 或者使用 `receiver[key]` 返回都能够 `修正` 这个问题
+
+`receiver` 这个参数保证了`调用方`
+
+```js
+const user = {
+  _name: "张三",
+  get name() {
+    console.log(this, this._name);
+  },
+};
+
+const userProxy = new Proxy(user, {
+  get(target, key, receiver) {
+    return Reflect.get(target, key, receiver);
+  },
+});
+
+const obj = {
+  _name: "李四",
+};
+
+Object.setPrototypeOf(obj, userProxy);
+console.log(obj.name); //李四
+```

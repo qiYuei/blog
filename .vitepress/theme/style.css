@@ -20,6 +20,7 @@
     0px 12px 32px rgba(0, 0, 0, 0.12), 0px 8px 16px -8px rgba(0, 0, 0, 0.16);
   --vp-c-text-code: #c73636;
   --vp-c-mute: #ffeeed;
+  --vp-c-text-1: ;
 }
 
 /**
@@ -136,5 +137,28 @@
 .vp-doc h5,
 .vp-doc h6 {
   color: #5e7ce0;
+  font-weight: bold;
+}
+
+.vp-doc ol {
+  list-style-type: none;
+  counter-reset: list-counter; /* 重置计数器 */
+}
+.vp-doc ul {
+  list-style-type: none;
+}
+
+.vp-doc ul > li::before {
+  content: "\2022"; /* 使用 Unicode 代码为项目符号添加小圆点 */
+  display: inline-block;
+  margin-right: 0.5em;
+  color: #0055eb;
+  font-weight: bold;
+}
+.vp-doc ol > li::before {
+  content: counter(list-counter) "."; /* 设置计数器显示在列表项前 */
+  counter-increment: list-counter; /* 计数器增加 */
+  margin-right: 0.5em;
+  color: #0055eb;
   font-weight: bold;
 }
