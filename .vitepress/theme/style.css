@@ -141,21 +141,27 @@
 }
 
 .vp-doc ol {
+  position: relative;
   list-style-type: none;
   counter-reset: list-counter; /* 重置计数器 */
 }
 .vp-doc ul {
+  position: relative;
   list-style-type: none;
 }
 
 .vp-doc ul > li::before {
   content: "\2022"; /* 使用 Unicode 代码为项目符号添加小圆点 */
-  display: inline-block;
+  /* display: inline-block; */
+  position: absolute;
+  left: 0;
   margin-right: 0.5em;
   color: #0055eb;
   font-weight: bold;
 }
 .vp-doc ol > li::before {
+  position: absolute;
+  left: 0;
   content: counter(list-counter) "."; /* 设置计数器显示在列表项前 */
   counter-increment: list-counter; /* 计数器增加 */
   margin-right: 0.5em;

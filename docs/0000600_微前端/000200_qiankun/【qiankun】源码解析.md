@@ -507,3 +507,20 @@ function getOverwrittenAppendChildOrInsertBefore(opts: {}) {}
 ## 通信
 
 ---
+
+## 3.0 改进点
+
+1. 代替 `eval` 来执行子应用的代码，解决 `chrome` 浏览器开启 `devtool` 造成内存泄漏
+   在 `2.0` 是靠 `import-html-entry` 这个库去解析 `html` 然后利用 `fetch` 请求具体 `script` 的内容直接通过 `eval` 这个 `api` 去执行代码，这会造成一些问题
+
+   - 在 `chrome` 浏览器开启 `devtool` 会造成内存泄漏
+   - 由于 `script` 的执行不再通过浏览器，其元素上绑定的事件也就不会正常响应，沙箱就必须手动处理此类事情需要手动触发绑定在 `script` 上面的 `onload/onerror`
+
+2. 基于客户端流式的方式修改子应用 HTML 标签
+   - 不用等到完整的页面回来才开始用正则去匹配内容，只需要在流的某一帧铺捉到我们即可运行这个脚本
+3. 依赖复用利用 `dependencymap`
+
+### 参考文章
+
+- https://www.yuque.com/kuitos/kb/suzvfe8gq4dwwd6i#l80Z0
+- https://github.com/marko-js/writable-dom/issues/7
