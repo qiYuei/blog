@@ -68,9 +68,7 @@ export default defineConfig({
 
     sidebar: getSideBar(),
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/qiYuei" }],
     outline: [1, 5],
   },
 });
